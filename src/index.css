@@ -1,0 +1,50 @@
+:root {
+  --roxo: #2b1b33;
+  --creme: #fff6e9;
+  --card: #fffdf8;
+  --coral: #ff6b5b;
+  --coral-escuro: #e4503f;
+  --amarelo: #ffc94d;
+  --salvia: #8fae84;
+  --linha: rgba(43, 27, 51, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--roxo);
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  margin: 0;
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+.nota {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+}
