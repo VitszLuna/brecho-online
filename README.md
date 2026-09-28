@@ -14,4 +14,4 @@ Catálogo de Produtos: Exibição de peças com fotos, tamanhos e valores.
 
 Filtros e Categorias: Organização por tipo de peça, tamanho ou estilo.
 
-Interface Responsiva: Adaptada para navegação em dispositivos móveis e desktop.
+Interface Responsiva: Adaptada para navegação em dispositivos móveis e desktop...
