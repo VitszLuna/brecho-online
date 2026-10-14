@@ -5,7 +5,6 @@ import { CATEGORIAS, WHATSAPP_NUMERO, WHATSAPP_FORMATADO } from '../config'
 import { PRODUTOS_EXEMPLO } from '../dadosExemplo'
 import ProdutoCard from '../components/ProdutoCard.jsx'
 import ProdutoModal from '../components/ProdutoModal.jsx'
-import fotoSobreMim from './sobremim.jpeg'
 import './Home.css'
 
 export default function Home() {
@@ -58,7 +57,6 @@ export default function Home() {
             <li><a href="#categorias">categorias</a></li>
             <li><a href="#destaques">novidades</a></li>
             <li><a href="#loja">a loja</a></li>
-            <li><a href="#sobre">sobre mim</a></li>
             <li><Link to="/entrar" style={{ fontWeight: '600', color: '#d6455d' }}>área adm</Link></li>
           </ul>
           <a className="btn-zap" href={linkZap} target="_blank" rel="noreferrer">chamar no zap</a>
@@ -75,16 +73,16 @@ export default function Home() {
         <div className="wrap hero-grid">
           <div>
             <h1>Roupas que eu amei um dia, prontas pra ganhar <em>um novo lar</em></h1>
-            <p>Peças femininas escolhidas a dedo, fotos reais tiradas por mim mesma, sem frescura. Dá uma olhada no que tem na pilha essa semana — capaz de você achar aquela peça favorita.</p>
+            <p>Peças femininas e masculinas escolhidas a dedo, fotos reais, sem frescura. Dá uma olhada no que tem na pilha essa semana — capaz de você achar aquela peça favorita.</p>
             <div className="hero-ctas">
               <a className="btn-principal" href="#loja">ver as roupas</a>
-              <a className="btn-secundario" href="#sobre">quem eu sou</a>
+              <a className="btn-secundario" href="#destaques">ver novidades</a>
             </div>
           </div>
           <div className="hero-fotos">
-            <div className="polaroid p1"><div className="fita"></div><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&auto=format&fit=crop" alt="Vestido Floral" /><span>✨ favorita</span></div>
-            <div className="polaroid p2"><img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=400&auto=format&fit=crop" alt="Saia Midi" /><span>tam. M</span></div>
-            <div className="polaroid p3"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&auto=format&fit=crop" alt="Blusa Tricô" /><span>chegou hoje</span></div>
+            <div className="polaroid p1"><div className="fita"></div><img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=400&auto=format&fit=crop" alt="Jaqueta Jeans Masculina" /><span>✨ favorita</span></div>
+            <div className="polaroid p2"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&auto=format&fit=crop" alt="Vestido Floral" /><span>tam. M</span></div>
+            <div className="polaroid p3"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&auto=format&fit=crop" alt="Camisa Masculina Linho" /><span>chegou hoje</span></div>
           </div>
         </div>
       </section>
@@ -122,7 +120,7 @@ export default function Home() {
       <section id="destaques">
         <div className="wrap">
           <h2 className="titulo-secao">chegou agora</h2>
-          <p className="sub-secao">O que tá mais fresquinho na pilha — peças de moda feminina escolhidas a dedo pra você.</p>
+          <p className="sub-secao">O que tá mais fresquinho na pilha — peças femininas e masculinas escolhidas a dedo pra você.</p>
           {!carregando && destaques.length === 0 && (
             <p className="sub-secao">Nada em destaque agora — dá uma olhada na loja completa aqui embaixo.</p>
           )}
@@ -146,20 +144,6 @@ export default function Home() {
             {listaLoja.map((p) => (
               <ProdutoCard key={p.id} produto={p} onClick={setProdutoAberto} />
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="sobre" id="sobre">
-        <div className="wrap sobre-grid">
-          <div className="sobre-foto">
-            <img src={fotoSobreMim} alt="Foto da Vitória" />
-          </div>
-          <div>
-            <h2>sobre mim</h2>
-            <p>Oi, eu sou a Vitória! Tenho 18 anos e resolvi abrir esse brechozinho pra dar um novo lar pras roupas que eu amei um dia, mas não uso mais. Cada peça aqui foi escolhida, lavada e fotografada por mim, com bastante carinho.</p>
-            <p>Todo real que entra vai direto pro meu potinho de sonhos — tô juntando dinheiro pra construir algo grande pra mim, e cada compra sua me deixa um passinho mais perto disso. Obrigada de coração por passar por aqui. 💛</p>
-            <div className="assinatura">com carinho, Vitória</div>
           </div>
         </div>
       </section>

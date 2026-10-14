@@ -1,9 +1,45 @@
-// Roupas de exemplo femininas com fotos reais de moda feminina
+// Roupas de exemplo femininas e masculinas com fotos reais
 // Quando o Supabase estiver ativo, as roupas cadastradas no painel substituem estas.
 
 export const PRODUTOS_EXEMPLO = [
   {
     id: 'exemplo-1',
+    nome: 'Jaqueta jeans vintage masculina',
+    categoria: 'outros',
+    preco: 'R$ 75',
+    tamanho: 'G',
+    observacao: 'Lavagem vintage clássica, tecido grosso e botões originais.',
+    fotos: [
+      'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&auto=format&fit=crop',
+    ],
+    novo: true,
+  },
+  {
+    id: 'exemplo-2',
+    nome: 'Camisa de linho masculina manga longa',
+    categoria: 'camisa',
+    preco: 'R$ 55',
+    tamanho: 'M',
+    observacao: 'Tecido leve e fresco de linho puro, ótimo caimento.',
+    fotos: [
+      'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop',
+    ],
+    novo: true,
+  },
+  {
+    id: 'exemplo-3',
+    nome: 'Camiseta estonada streetwear masculina',
+    categoria: 'camisa',
+    preco: 'R$ 35',
+    tamanho: 'GG',
+    observacao: 'Algodão macio penteado, modelagem relaxed.',
+    fotos: [
+      'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop',
+    ],
+    novo: true,
+  },
+  {
+    id: 'exemplo-4',
     nome: 'Vestido floral midi',
     categoria: 'vestido',
     preco: 'R$ 45',
@@ -16,7 +52,31 @@ export const PRODUTOS_EXEMPLO = [
     novo: true,
   },
   {
-    id: 'exemplo-2',
+    id: 'exemplo-5',
+    nome: 'Calça cargo sarja masculina',
+    categoria: 'calca',
+    preco: 'R$ 65',
+    tamanho: '42',
+    observacao: 'Bolsos laterais utilitários, tom caqui impecável.',
+    fotos: [
+      'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&auto=format&fit=crop',
+    ],
+    novo: true,
+  },
+  {
+    id: 'exemplo-6',
+    nome: 'Calça wide leg alfaiataria',
+    categoria: 'calca',
+    preco: 'R$ 55',
+    tamanho: '38',
+    observacao: 'Modelagem perfeita na cintura, tecido encorpado.',
+    fotos: [
+      'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&auto=format&fit=crop',
+    ],
+    novo: false,
+  },
+  {
+    id: 'exemplo-7',
     nome: 'Camisa jeans oversized feminina',
     categoria: 'camisa',
     preco: 'R$ 38',
@@ -25,22 +85,22 @@ export const PRODUTOS_EXEMPLO = [
     fotos: [
       'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&auto=format&fit=crop',
     ],
-    novo: true,
+    novo: false,
   },
   {
-    id: 'exemplo-3',
-    nome: 'Short jeans cintura alta',
+    id: 'exemplo-8',
+    nome: 'Bermuda jeans vintage masculina',
     categoria: 'short',
-    preco: 'R$ 30',
-    tamanho: 'P',
-    observacao: 'Bem confortável, cós alto com botão vintage.',
+    preco: 'R$ 38',
+    tamanho: '40',
+    observacao: 'Jeans confortável, caimento reto tradicional.',
     fotos: [
       'https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&auto=format&fit=crop',
     ],
     novo: false,
   },
   {
-    id: 'exemplo-4',
+    id: 'exemplo-9',
     nome: 'Saia midi plissada rosa',
     categoria: 'saia',
     preco: 'R$ 42',
@@ -52,19 +112,7 @@ export const PRODUTOS_EXEMPLO = [
     novo: false,
   },
   {
-    id: 'exemplo-5',
-    nome: 'Calça wide leg alfaiataria',
-    categoria: 'calca',
-    preco: 'R$ 55',
-    tamanho: '38',
-    observacao: 'Modelagem perfeita na cintura, tecido encorpado.',
-    fotos: [
-      'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&auto=format&fit=crop',
-    ],
-    novo: true,
-  },
-  {
-    id: 'exemplo-6',
+    id: 'exemplo-10',
     nome: 'Blusa de tricô feminina gola alta',
     categoria: 'outros',
     preco: 'R$ 48',
@@ -73,22 +121,22 @@ export const PRODUTOS_EXEMPLO = [
     fotos: [
       'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&auto=format&fit=crop',
     ],
-    novo: true,
+    novo: false,
   },
   {
-    id: 'exemplo-7',
-    nome: 'Top cropped feminino branco',
+    id: 'exemplo-11',
+    nome: 'Top cropped canelado feminino',
     categoria: 'outros',
     preco: 'R$ 25',
     tamanho: 'P',
-    observacao: 'Modelagem ajustada ao corpo, tecido canelado super confortável.',
+    observacao: 'Modelagem ajustada ao corpo, tecido super confortável.',
     fotos: [
       'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&auto=format&fit=crop',
     ],
-    novo: true,
+    novo: false,
   },
   {
-    id: 'exemplo-8',
+    id: 'exemplo-12',
     nome: 'Vestido longo de festa elegante',
     categoria: 'vestido',
     preco: 'R$ 90',
