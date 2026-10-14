@@ -38,11 +38,15 @@ export default function Login() {
     } else {
       // Modo Demonstração Local (antes de conectar o Supabase)
       setEnviando(false)
-      if (email.trim().toLowerCase() === 'admin@vitoriabrecho.com' && senha === 'vitoria2026') {
+      const emailLimpo = email.trim().toLowerCase()
+      if (
+        (emailLimpo === 'admin@brecho.online' || emailLimpo === 'admin@vitoriabrecho.com') &&
+        (senha === 'brecho2026' || senha === 'vitoria2026')
+      ) {
         localStorage.setItem('vitoria_demo_session', 'true')
         navegar('/admin')
       } else {
-        setErro('E-mail ou senha incorretos para o modo demonstração. Use admin@vitoriabrecho.com e senha vitoria2026.')
+        setErro('E-mail ou senha incorretos para o modo demonstração. Use admin@brecho.online e senha brecho2026.')
       }
     }
   }
@@ -51,13 +55,13 @@ export default function Login() {
     <div className="pagina-login">
       <form className="cartao-login" onSubmit={handleSubmit}>
         <h1>entrar na área adm</h1>
-        <p className="sub-secao">Área restrita da Vitória para gerenciar o brechó.</p>
+        <p className="sub-secao">Área de administração do Brechó Online.</p>
 
         {!supabaseConfigurado && (
           <div className="dica-login" style={{ background: '#fff3cd', padding: '12px', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '16px', color: '#856404' }}>
             💡 <b>Modo Demonstração:</b><br />
-            E-mail: <code>admin@vitoriabrecho.com</code><br />
-            Senha: <code>vitoria2026</code>
+            E-mail: <code>admin@brecho.online</code><br />
+            Senha: <code>brecho2026</code>
           </div>
         )}
 

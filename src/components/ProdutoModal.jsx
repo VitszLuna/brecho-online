@@ -19,7 +19,7 @@ export default function ProdutoModal({ produto, aoFechar }) {
   if (!produto) return null
 
   const fotos = produto.fotos && produto.fotos.length > 0 ? produto.fotos : []
-  const mensagem = `Oi Vitória! Vi o item "${produto.nome}" (tamanho ${produto.tamanho}) no site e queria saber mais 😊`
+  const mensagem = `Oi! Vi o item "${produto.nome}" (tamanho ${produto.tamanho}) no Brechó Online e queria saber mais 😊`
   const linkComprar = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`
 
   function anterior() {

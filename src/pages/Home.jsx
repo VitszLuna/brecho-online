@@ -52,7 +52,7 @@ export default function Home() {
     <div>
       <header className="header">
         <nav className="wrap nav">
-          <div className="logo"><b>vitória</b> <em>brechó</em></div>
+          <div className="logo"><b>brechó</b> <em>online</em></div>
           <ul className="nav-links">
             <li><a href="#categorias">categorias</a></li>
             <li><a href="#destaques">novidades</a></li>
@@ -153,10 +153,10 @@ export default function Home() {
           <h2>ficou com vontade de alguma peça?</h2>
           <p>Me chama no WhatsApp <strong>{WHATSAPP_FORMATADO}</strong> que a gente combina tudo por lá — pagamento, entrega ou retirada.</p>
           <a className="footer-zap" href={linkZap} target="_blank" rel="noreferrer">
-            chamar a Vitória no WhatsApp · {WHATSAPP_FORMATADO}
+            chamar no WhatsApp · {WHATSAPP_FORMATADO}
           </a>
           <p className="footer-nota">
-            feito com carinho por Vitória, 2026 · <Link to="/entrar">área admin / entrar</Link>
+            brechó online, 2026 · <Link to="/entrar">área adm / entrar</Link>
           </p>
         </div>
       </footer>

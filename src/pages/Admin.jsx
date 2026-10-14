@@ -269,12 +269,12 @@ export default function Admin() {
       doc.setFont('helvetica', 'bold')
       doc.setFontSize(22)
       doc.setTextColor(214, 69, 93)
-      doc.text('VITÓRIA BRECHÓ', 14, 18)
+      doc.text('BRECHÓ ONLINE', 14, 18)
 
       doc.setFont('helvetica', 'normal')
       doc.setFontSize(12)
       doc.setTextColor(60, 60, 60)
-      doc.text('Catálogo de Roupas Femininas & Peças Selecionadas', 14, 26)
+      doc.text('Catálogo de Roupas & Peças Selecionadas', 14, 26)
 
       doc.setFontSize(10)
       doc.setTextColor(100, 100, 100)
@@ -355,10 +355,10 @@ export default function Admin() {
         doc.setPage(i)
         doc.setFontSize(8)
         doc.setTextColor(150, 150, 150)
-        doc.text(`Vitória Brechó · Catálogo gerado em ${new Date().toLocaleDateString('pt-BR')} · Pág. ${i} de ${totalPaginas}`, 14, 290)
+        doc.text(`Brechó Online · Catálogo gerado em ${new Date().toLocaleDateString('pt-BR')} · Pág. ${i} de ${totalPaginas}`, 14, 290)
       }
 
-      doc.save(`catalogo-vitoria-brecho-${new Date().toISOString().slice(0, 10)}.pdf`)
+      doc.save(`catalogo-brecho-online-${new Date().toISOString().slice(0, 10)}.pdf`)
     } catch (err) {
       alert('Erro ao gerar catálogo em PDF: ' + err.message)
     } finally {
@@ -381,7 +381,7 @@ export default function Admin() {
   return (
     <div className="pagina-admin">
       <header className="admin-header">
-        <div className="logo"><b>vitória</b> <em>brechó</em> · painel administrativo</div>
+        <div className="logo"><b>brechó</b> <em>online</em> · painel administrativo</div>
         <div className="admin-header-acoes">
           <button className="btn-principal" onClick={exportarPDF} disabled={exportandoPDF} style={{ background: '#25D366' }}>
             {exportandoPDF ? 'gerando PDF com fotos...' : '📄 exportar catálogo (PDF)'}
@@ -469,14 +469,26 @@ export default function Admin() {
           </label>
 
           <label>
-            Fotos da peça
+            Fotos da peça (selecione várias imagens juntas ou adicione mais aos poucos)
             <input
               type="file"
               accept="image/*"
               multiple
-              onChange={(e) => setNovosArquivos(Array.from(e.target.files))}
+              onChange={(e) => {
+                const selecionados = Array.from(e.target.files)
+                if (selecionados.length > 0) {
+                  setNovosArquivos((atuais) => [...atuais, ...selecionados])
+                  e.target.value = ''
+                }
+              }}
             />
           </label>
+
+          {(fotosAtuais.length > 0 || novosArquivos.length > 0) && (
+            <div style={{ margin: '6px 0 10px', fontSize: '0.85rem', color: '#444' }}>
+              📸 <b>{fotosAtuais.length + novosArquivos.length} foto(s) selecionada(s)</b> — a primeira foto da lista será a capa no site.
+            </div>
+          )}
 
           {fotosAtuais.length > 0 && (
             <div className="miniaturas">
